@@ -19,10 +19,4 @@ const User = sequelize.define("Users",{
         allowNull:false
     }
 },{versionKey:false,timestamps:true});
-
-const createUser = async()=>{
-    await User.sync({force:true});
-    console.log("User tablle is created");
-}
-createUser();
-module.exports = {User,createUser};
+module.exports = {User};
